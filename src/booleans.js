@@ -40,27 +40,35 @@ function isLessThanOrEqualTo(a, b) {
 };
 
 function isOdd(a) {
-  // your code here
+  return a % 2 === 1;
 };
 
 function isEven(a) {
-  // your code here
+  return 1+a % 2 === 1;
 };
 
 function isSquare(a) {
-  // your code here
+  return Math.sqrt(a) % 1 === 0 && a >= 0;
 };
 
 function startsWith(char, string) {
-  // your code here
+  return char === string.slice(0, 1);
 };
 
 function containsVowels(string) {
-  // your code here
-};
+  let vowelsCount = 0
+  const str = string.toLowerCase();
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let char of str) {
+    if (vowels.includes(char)){
+      vowelsCount++;
+    };
+  };
+  return vowelsCount > 0;
+}
 
 function isLowerCase(string) {
-  // your code here
+  return string === string.toLowerCase();
 };
 
 module.exports = {
