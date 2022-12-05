@@ -1,61 +1,92 @@
 const getNthElement = (index, array) => {
-  // your code here
+  return array[index % array.length];
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array2 = array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index,1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  for (let i = 0; i < numbers.length; i++){
+    numbers[i] = String(numbers[i]);
+  }
+  return numbers;
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  for (let i = 0; i < strings.length; i++){
+    strings [i] = strings[i].toUpperCase();
+  }
+  return strings;
 };
 
 const reverseWordsInArray = strings => {
-  // your code here
+  for (let i = 0; i < strings.length; i++){
+    strings [i] = strings[i].split('').reverse().join('');
+  }
+  return strings;
 };
 
 const onlyEven = numbers => {
-  // your code here
+  for (let i =0; i < numbers.length; i++){
+    if (numbers[i] % 2 === 0){
+    }
+    else {
+      numbers.splice(i,1);
+    }
+  }
+  return numbers;
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  const result = array.slice();
+  result.splice(index,1);
+  return result;
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (let i = 0; i < strings.length; i++){
+    if (vowels.includes(strings[i].slice(0,1).toLowerCase())){
+    }
+    else {
+      strings.splice(i,1);
+      i--;
+    }
+  }
+  return strings.concat().reduce((accumulator, currentValue) => accumulator.concat(currentValue), []);
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  const intVal = 0;
+  return numbers.reduce((acc, curr) => acc + curr, intVal);
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+  function CompFn(a, b) {
+    return a.charCodeAt(a.length -1) - b.charCodeAt(b.length -1);
+  }
+  return strings.sort(CompFn);
 };
 
 module.exports = {
